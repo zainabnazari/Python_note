@@ -830,6 +830,9 @@ We have understood how kNN works, but we don't know how to choose k. We have to 
 In the following code, we use Cross-Validation to find the best value for k.
 \lstinputlisting[language=Python]{classification_with_scikit_learn.py}\label{classification_with_scikit_learn.py}
 
+\subsection{Decision Trees}
+Decision Trees are another supervised learning algorithm, trying to achieve the same thing as kNN. The idea is that we build a tree where the nodes are questions about attributes. So it is a hierarchical set of attributes that in conjunction tell apart classes. An instance is classified as follows:
+%%%TODO: EXPLAIN
 \subsection{Unsupervised Learning}
 Another major branch of machine learning does not involve class labels. Instead, it searches for connections of attributes, patterns and correlations in the data. For instance, considering the previous example of weather forecast, in the unsupervised learning, machine would try to collect the data points in groups that have similar temperatures and wind speeds. It organises them in sets of similar properties. This technique is called clustering. However, there are other techniques that use unsupervised learning such as Encoding and Feature Analysis.
 They all have a common point that there is no ground truth given. Unsupervised learning can help to find the approximate function in the supervised learning process.
