@@ -11,6 +11,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{xparse}
+\usepackage{gensymb}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -45,7 +46,7 @@
             anchorcolor = blue]{hyperref}
             \author{Zainab Nazari, and Carl Stermann-L\"ucke}
 \title{Python Note}
-\date{}
+\date{\today}
 
 
 
@@ -58,7 +59,11 @@
 
 
 \maketitle
+\begin{abstract}
+    This note is the summary of our almost \textit{every day} short discussion over python, and its application since September 2019. We try to provide a simple way to learn python. We have included useful examples to further clarify topics. This note was helpful for us and we hope others can benefit from the content. If you have any questions or suggestions we are glad to know about it.
+\end{abstract}
 \tableofcontents
+
 
 
 
@@ -77,7 +82,7 @@ In the   \href{https://colab.research.google.com}{colaboratory website}  you can
 We generally need to tell apart two different ways of running python
 \begin{itemize}
 \item \textbf{Interactive Python}, by using the terminal you can interactively write and run a python code line by line. You just need to call python, and use it interactively in your terminal. For example
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \includegraphics[width=0.7\textwidth]{interactive-python-terminal.PNG}
 \end{figure}
 \item \textbf{Python Scripts} (.py), which can be written in any editor and run in the terminal. To run a python code, we need to go to the folder/directory where the code is saved, then type \texttt{\$ python name.py}, and press enter. 
@@ -220,7 +225,7 @@ To call a function, write the name of the function, followed by the list of para
 Example:
 \lstinputlisting[language=Python]{function.py}
 Note, for interactive python shell, if we define a function, then we need to have a line (by pressing enter key once more) before we call the function itself. Otherwise the code will give error, look at the script below
-\begin{figure}[h] \centering
+\begin{figure}[htbp] \centering
 \includegraphics[width=0.5\textwidth]{func.PNG}
 \end{figure}
 
@@ -528,26 +533,26 @@ Here we check some of them. Along with simple examples we try to show some of th
 here is a simple example for a one-dimensional list
 \lstinputlisting[language=Python]{plot_list_data_1.py}
 The result looks as follows
-\begin{figure}[h]\centering \caption{one-dimensional plot}
+\begin{figure}[htbp]\centering \caption{one-dimensional plot}
 \includegraphics[width=0.5\textwidth]{plot_list_data_1.png}
 \end{figure}
 As you see the vertical axes is the range of our data and the horizontal axes varies with step one by default. 
 Here is the two-dimensional version of the plot
 \lstinputlisting[language=Python]{plot_list_data_2.py}
 The result looks as follows. 
-\begin{figure}[h]\centering \caption{two-dimensional plot}
+\begin{figure}[htbp]\centering \caption{two-dimensional plot}
 \includegraphics[width=0.5\textwidth]{plot_list_data_2.png}
 \end{figure}
 You can obtain the two dimensional plot also with the scattering option. Note that, scatter plot is useful to assess the correlation between horizontal and vertical axes's.
 \lstinputlisting[language=Python]{plot_list_data_3.py}
 
-\begin{figure}[h]\centering \caption{scatter plot}
+\begin{figure}[htbp]\centering \caption{scatter plot}
 \includegraphics[width=0.5\textwidth]{plot_list_data_3.png}
 \end{figure}
 
 \subsubsection{connected data point list plot}
 \lstinputlisting[language=Python]{plot_list_data_4.py}
-\begin{figure}[h]\centering \caption{connected points (line plot)}
+\begin{figure}[htbp]\centering \caption{connected points (line plot)}
 \includegraphics[width=0.5\textwidth]{plot_list_data_4.png}
 \end{figure}
 
@@ -556,10 +561,10 @@ Here is a simple example how to plot a $\sin(x)$ function.
 \lstinputlisting[language=Python]{sin.py}
 \subsection{3D plot}
 \lstinputlisting[language=Python]{3dplot.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \includegraphics[width=0.6\textwidth]{3dplot.png}
 \end{figure}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \includegraphics[width=0.5\textwidth]{sin.png}
 \end{figure}
 \subsubsection{Extra remark on plotting functions}
@@ -570,7 +575,7 @@ One way to simply resolve this is by altering \te{math} to \te{numpy}.
 \lstinputlisting[language=Python]{plot_fix.py}
 Another way is to use the \te{vectorize} function, see example
 \lstinputlisting[language=Python]{vectorisation.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{vectorisation}
 \includegraphics[width=0.5\textwidth]{vectorisation.png}
 \end{figure}
@@ -578,7 +583,7 @@ Another way is to use the \te{vectorize} function, see example
 \subsection{subplot}
 here is an example where we can learn how to make several plot in the same figure.
 \lstinputlisting[language=Python]{subplot.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{here is an example of subplot}
 \includegraphics[width=0.5\textwidth]{subplot.png}
 \end{figure}
@@ -593,7 +598,7 @@ To estimate the distribution of the data from the histogram, it is recommended t
  In the exceptional case that a data value is exactly on the boundary of a bin, it will be counted for the next, not the previous bin, except if it is the largest value, which is counted towards the previous bin. In the example given in this part, you can check how the values are distributed in the boundaries of ranges. 
  In our example, there are 5 bins, each of them having the size 2. So there is a bin for the range 6 to 8 and another one for the range 8 to 10.
 \lstinputlisting[language=Python]{histogram.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{here is an example of histogram}
 \includegraphics[width=0.5\textwidth]{histogram.png}
 \end{figure}
@@ -605,14 +610,14 @@ In the following plot we see, how fill\_between, and
 yticks/xticks functions work.
 
 \lstinputlisting[language=Python]{fill.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{fill\_between, and yticks}
 \includegraphics[width=0.5\textwidth]{fill.png}
 \end{figure}
 Here is an example for the scatter plot with the size of the data points.
 
 \lstinputlisting[language=Python]{scatter_size.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{scatter plot with size and colors}
 \includegraphics[width=0.5\textwidth]{scatter_size.png}
 \end{figure}
@@ -620,14 +625,14 @@ Here is an example for the scatter plot with the size of the data points.
 \subsection{Legends} \label{legend}
 Here is an example on how to make a legend for a plot.
 \lstinputlisting[language=Python]{legend.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{Legend}
 \includegraphics[width=0.5\textwidth]{legend.png}
 \end{figure}
 
 If we like to have no frame for the legend bar we can use the command \te{plt.legend(frameon=False)}.
 \lstinputlisting[language=Python]{legendframeless.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{Frameless Legend}
 \includegraphics[width=0.5\textwidth]{legendframeless.png}
 \end{figure}
@@ -642,7 +647,7 @@ Another option is to specify the colour using RGB code. In the RGB code, the col
 Option 1: color=(0.5,1.0,0.0)
 Option 2: color=`\#48a7f9'
 \lstinputlisting[language=Python]{all_colour.py}
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{Colours}
 \includegraphics[width=0.5\textwidth]{all_colour.pdf}
 \end{figure}
@@ -654,7 +659,7 @@ Option 2: color=`\#48a7f9'
 If we want to make the frame fit to the data, then we can use the command \te{plt.margins(0)}. This is the example of the legend \ref{legend}.
 \lstinputlisting[language=Python]{margin.py}
 
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{Margin}
 \includegraphics[width=0.5\textwidth]{margin.png}
 \end{figure}
@@ -665,7 +670,7 @@ Example:
 
 \lstinputlisting[language=Python]{margin1.py}
 
-\begin{figure}[h]\centering
+\begin{figure}[htbp]\centering
 \caption{Margin}
 \includegraphics[width=0.5\textwidth]{margin1.png}
 \end{figure}
@@ -749,7 +754,7 @@ In supervised learning the machine tries to learn patterns from the given data.
 
 Let's imagine we are the machine and we want to learn from a simple dataset.
 For that let's consider some data from the weather forecast. Note that this example is to simplify the concept of supervised learning and has nothing to do with reality.
-We are given data for temperature and wind speed for three consecutive days. Temperature and wind speed are the \textit{attributes} of the day. Each day belongs to one of two \textit{classes}: Rain or no rain. So we get one data point for each day. We call these data points \textit{instances}.
+We are given data for temperature and wind speed for three consecutive days. Temperature and wind speed are the \textit{attributes} of the day. Each day belongs to one of two \textit{classes}: Rain or no rain. So we get one data point for each day. We call these data points \textit{instances}. The wind speed and the temperature of a given day in conjunction is an instance.
 
 
 % Please add the following required packages to your document preamble:
@@ -773,7 +778,7 @@ As you see the closest condition to Wednesday is on Tuesday. Therefore, just a n
 
 This form of classification where you consider the nearest instances in the vector space is called ``k-nearest-neighbours"-classifier, or ``kNN" for short. $k$ is a parameter that tells how many nearest neighbours the algorithm should look at. What we have described is a 1-NN (for 1-nearest-neighbour) classifier, so it only looks at the single nearest neighbouring data point. It is also possible to look at, for example, the 15 nearest data points and predict the class that most of the 15 neighbours belong to. This would be a 15-NN classifier.
 
-We assume that there is a function that tells the relation between attributes and the class, but we don't know this function. A supervised learning algorithm tries to induct this function from examples, where it knows the attributes and the corresponding class. Induction means to find general rules from examples. After it has inducted the function, it can deduct the classes of new data points from that function.
+We assume that there is a function that tells the relation between attributes and the class, but we don't know this function. This function is known as \textit{target concept} in the literature. A supervised learning algorithm tries to induct this function from examples, where it knows the attributes and the corresponding class. Induction means to find general rules from examples. After it has inducted the function, it can deduct the classes of new data points from that function.
 
 The most easy example that we can think of is the daily sunrise: We have seen that the sun rose today, and yesterday, and the day before, and the day before that. From those samples, we \textit{induct} that it rises every day. This is a general rule inducted from sample observations. From there, we can \textit{deduct} whether the sun will rise again tomorrow - we will predict that it will rise.
 
@@ -785,7 +790,7 @@ Let us have a closer look at Supervised Learning. A simple example consists of t
 \end{itemize}
 
 \subsubsection{kNN in Scikit-Learn}
-Scikit-learn has implemented the kNN classifier. In order to see how well the kNN classifier classifies the data, we would make an experiment. We take the  data in which we already know  their appropriate classes. We then split the data into two different distinct sets. One called training, and the other called testing. In general the fraction of the data which goes to the training part is larger than the testing. In the training part, we give both the data for attribute space and their classes to the machine. We aim to teach the machine how attribute space is associated to their classes. In the testing part, we try to see if the machine actually learnt enough from the training part. We give the data of attribute values of the testing set, but not their classes. Then we ask the machine to predict their classes. As we already know their appropriate classes, we can find out how close the prediction was with their actual class. This way, we can learn how much our kNN classifier is reliable. In the following code we first split the data into training and test set, then make the classifier learn on the training set, and then compare the prediction of the classifier on the test set with the actual classes in the test set. We used example data  which was generated in a supervised learning approach for finding appropriate behaviour of robot swarms. (swarm behaviour) 
+Scikit-learn has implemented the kNN classifier. In order to see how well the kNN classifier classifies the data, we would make an experiment. We take the  data in which we already know  their appropriate classes. We then split the data into two different distinct sets. One called training, and the other called testing. In general the fraction of the data which goes to the training part is larger than the testing. In the training part, we give both the data for attribute space and their classes to the machine. We aim to teach the machine how attribute space is associated to their classes. In the testing part, we try to see if the machine actually learnt enough from the training part. We give the data of attribute values of the testing set, but not their classes. Then we ask the machine to predict their classes. As we already know their appropriate classes, we can find out how close the prediction was with their actual class. This way, we can learn how much our kNN classifier is reliable. In the following code we first split the data into training and test set, then make the classifier learn on the training set, and then compare the prediction of the classifier on the test set with the actual classes in the test set. We used example data  which was generated in a supervised learning approach for finding appropriate behaviour of robot swarms. (swarm behaviour) \cite{carl}.
 \lstinputlisting[language=Python]{classifier.py}\label{classifier.py}
 
 
@@ -830,9 +835,32 @@ We have understood how kNN works, but we don't know how to choose k. We have to 
 In the following code, we use Cross-Validation to find the best value for k.
 \lstinputlisting[language=Python]{classification_with_scikit_learn.py}\label{classification_with_scikit_learn.py}
 
+
+
+
 \subsection{Decision Trees}
-Decision Trees are another supervised learning algorithm, trying to achieve the same thing as kNN. The idea is that we build a tree where the nodes are questions about attributes. So it is a hierarchical set of attributes that in conjunction tell apart classes. An instance is classified as follows:
+\label{decision_trees}
+Decision Trees are another supervised learning algorithm, trying to achieve the same thing as kNN. The idea is that we build a tree where the nodes are questions about attributes. The instances are split into subsets depending on which value they have in that attribute. The subsets are again split on an attribute, which depends on the value of the previous attribute. So it is a hierarchical tree of attributes that in conjunction tell apart classes. At each node, we split the data into sets for different values of the node attribute. Each attribute is chosen to minimize the entropy of the sets of instances that have a specific value for that attribute. For example, an instance is classified as follows: 
 %%%TODO: EXPLAIN
+Let us assume that our decision tree has learned that it rains if either the temperature is below $5 \degree$, or (above $30 \degree$ and the wind is stronger than 50 km/h). It has three nodes: The first one asks whether the temperature is above $30 \degree$. If we have a new day of, say, temperature $35 \degree$, it will then ask for the wind speed. If that one is above 50 km/h, the decision tree will predict that it rains. Otherwise, it will predict that it does not rain. If, for another day, it is colder than $30 \degree$, the decision tree will not ask for the wind speed. Instead, it will ask whether the temperature is below $5 \degree$. If it is, then the decision tree will predict that it rains. Otherwise it will predict that it doesn't rain. The decision tree is visualized in figure \ref{fig:weather-decision-tree}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.7]{Decision_Tree_Example.jpg}
+    \caption{A visualisation of the decision tree of section \ref{decision_trees}.}
+    \label{fig:weather-decision-tree}
+\end{figure}
+
+\subsubsection{Decision Trees in Scikit-Learn}
+The following code shows how to learn with decision trees in scikit-learn. The code is taken from \cite{DecisionTreesScikitLearn}. We also use a data set of iris flowers that is included in scikit-learn.
+\lstinputlisting[language=Python]{decision_tree_example.py}\label{decision_tree_example.py}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.9]{decision_tree_iris.png}
+    \caption{Decision tree example generate by the code in section \ref{decision_tree_example.py}.}
+    \label{fig:decision}
+\end{figure}
+
 \subsection{Unsupervised Learning}
 Another major branch of machine learning does not involve class labels. Instead, it searches for connections of attributes, patterns and correlations in the data. For instance, considering the previous example of weather forecast, in the unsupervised learning, machine would try to collect the data points in groups that have similar temperatures and wind speeds. It organises them in sets of similar properties. This technique is called clustering. However, there are other techniques that use unsupervised learning such as Encoding and Feature Analysis.
 They all have a common point that there is no ground truth given. Unsupervised learning can help to find the approximate function in the supervised learning process.
@@ -979,20 +1007,15 @@ After that to install \te{git python} you can use the following command:
 \lstinputlisting[language=Python]{match.py}
 \item A proposed answer (this answer has been manipulated slightly by removing the peculiar negative values for the daily new cases reported  as to represent the data in aesthetic way)
 \lstinputlisting[language=Python]{daily_cases_trieste.py}
-
-\begin{figure}[h]\centering
-
+\end{enumerate}
+\begin{figure}[htbp]\centering
 \includegraphics[width=1.0\textwidth]{daily_cases_trieste.png}
 \end{figure}
-
-\end{enumerate}
-
-
-
-
-
 
 \bibliographystyle{plain}
 \bibliography{refe}
 \end{document}\lstinputlisting[language=Python]{Classification_With_Scikit-Learn.ipynb}\label{Classification With Scikit-Learn.ipynb}
+
+
+
 
