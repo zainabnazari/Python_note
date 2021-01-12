@@ -19,7 +19,7 @@
 \BOOKMARK [2][-]{subsection.2.10}{Input}{section.2}% 19
 \BOOKMARK [2][-]{subsection.2.11}{Conditional Statements}{section.2}% 20
 \BOOKMARK [2][-]{subsection.2.12}{while-loop}{section.2}% 21
-\BOOKMARK [3][-]{subsubsection.2.12.1}{while-True}{subsection.2.12}% 22
+\BOOKMARK [3][-]{subsubsection.2.12.1}{while-True, and if True}{subsection.2.12}% 22
 \BOOKMARK [2][-]{subsection.2.13}{for-loop}{section.2}% 23
 \BOOKMARK [3][-]{subsubsection.2.13.1}{list comprehension}{subsection.2.13}% 24
 \BOOKMARK [3][-]{subsubsection.2.13.2}{nested for-loop}{subsection.2.13}% 25
@@ -36,63 +36,70 @@
 \BOOKMARK [2][-]{subsection.2.20}{Write Data out to Files}{section.2}% 36
 \BOOKMARK [2][-]{subsection.2.21}{Read Data in from Files}{section.2}% 37
 \BOOKMARK [3][-]{subsubsection.2.21.1}{Read in Several Data files}{subsection.2.21}% 38
-\BOOKMARK [2][-]{subsection.2.22}{import}{section.2}% 39
-\BOOKMARK [2][-]{subsection.2.23}{Packages}{section.2}% 40
-\BOOKMARK [1][-]{section.3}{Advanced}{}% 41
-\BOOKMARK [2][-]{subsection.3.1}{args}{section.3}% 42
-\BOOKMARK [2][-]{subsection.3.2}{kwargs}{section.3}% 43
-\BOOKMARK [1][-]{section.4}{NumPy}{}% 44
-\BOOKMARK [2][-]{subsection.4.1}{numpy arrays}{section.4}% 45
-\BOOKMARK [2][-]{subsection.4.2}{slicing}{section.4}% 46
-\BOOKMARK [2][-]{subsection.4.3}{shape and reshape}{section.4}% 47
-\BOOKMARK [2][-]{subsection.4.4}{linspace}{section.4}% 48
-\BOOKMARK [2][-]{subsection.4.5}{arange}{section.4}% 49
-\BOOKMARK [3][-]{subsubsection.4.5.1}{comparing arange and linspace}{subsection.4.5}% 50
-\BOOKMARK [2][-]{subsection.4.6}{meshgrid}{section.4}% 51
-\BOOKMARK [2][-]{subsection.4.7}{random}{section.4}% 52
-\BOOKMARK [2][-]{subsection.4.8}{hstack\(\)}{section.4}% 53
-\BOOKMARK [2][-]{subsection.4.9}{vstack\(\)}{section.4}% 54
-\BOOKMARK [2][-]{subsection.4.10}{Conditional Selection}{section.4}% 55
-\BOOKMARK [2][-]{subsection.4.11}{np.where}{section.4}% 56
-\BOOKMARK [2][-]{subsection.4.12}{Statistical Methods}{section.4}% 57
-\BOOKMARK [2][-]{subsection.4.13}{Error with math versus numpy}{section.4}% 58
-\BOOKMARK [1][-]{section.5}{Matplotlib}{}% 59
-\BOOKMARK [2][-]{subsection.5.1}{Plotting List of Data}{section.5}% 60
-\BOOKMARK [3][-]{subsubsection.5.1.1}{connected data point list plot}{subsection.5.1}% 61
-\BOOKMARK [2][-]{subsection.5.2}{Plotting Function}{section.5}% 62
-\BOOKMARK [2][-]{subsection.5.3}{3D plot}{section.5}% 63
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Extra remark on plotting functions}{subsection.5.3}% 64
-\BOOKMARK [2][-]{subsection.5.4}{subplot}{section.5}% 65
-\BOOKMARK [2][-]{subsection.5.5}{Histogram}{section.5}% 66
-\BOOKMARK [2][-]{subsection.5.6}{Customisation}{section.5}% 67
-\BOOKMARK [2][-]{subsection.5.7}{Legends}{section.5}% 68
-\BOOKMARK [2][-]{subsection.5.8}{Colors}{section.5}% 69
-\BOOKMARK [2][-]{subsection.5.9}{Margins}{section.5}% 70
-\BOOKMARK [1][-]{section.6}{Pandas}{}% 71
-\BOOKMARK [2][-]{subsection.6.1}{Selection}{section.6}% 72
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Conditional Selection}{subsection.6.1}% 73
-\BOOKMARK [2][-]{subsection.6.2}{Column manipulation}{section.6}% 74
-\BOOKMARK [1][-]{section.7}{Scikit-Learn}{}% 75
-\BOOKMARK [2][-]{subsection.7.1}{Supervised Learning}{section.7}% 76
-\BOOKMARK [3][-]{subsubsection.7.1.1}{kNN in Scikit-Learn}{subsection.7.1}% 77
-\BOOKMARK [2][-]{subsection.7.2}{Limitations of supervised learning}{section.7}% 78
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Insufficient coverage of the attribute space}{subsection.7.2}% 79
-\BOOKMARK [3][-]{subsubsection.7.2.2}{Biased Data}{subsection.7.2}% 80
-\BOOKMARK [3][-]{subsubsection.7.2.3}{Lack of Information}{subsection.7.2}% 81
-\BOOKMARK [3][-]{subsubsection.7.2.4}{Lack of Complexity of the classifier \(``underfitting"\)}{subsection.7.2}% 82
-\BOOKMARK [3][-]{subsubsection.7.2.5}{Over-complexity of the classifier \(``overfitting"\)}{subsection.7.2}% 83
-\BOOKMARK [2][-]{subsection.7.3}{Why splitting the data is important}{section.7}% 84
-\BOOKMARK [2][-]{subsection.7.4}{Unsupervised Learning}{section.7}% 85
-\BOOKMARK [3][-]{subsubsection.7.4.1}{Encoding}{subsection.7.4}% 86
-\BOOKMARK [3][-]{subsubsection.7.4.2}{Feature Analysis}{subsection.7.4}% 87
-\BOOKMARK [1][-]{section.8}{SciPy}{}% 88
-\BOOKMARK [1][-]{section.9}{yt-toolkit}{}% 89
-\BOOKMARK [1][-]{section.10}{Glossary}{}% 90
-\BOOKMARK [2][-]{subsection.10.1}{Enumerate}{section.10}% 91
-\BOOKMARK [2][-]{subsection.10.2}{Init function}{section.10}% 92
-\BOOKMARK [2][-]{subsection.10.3}{Main condition}{section.10}% 93
-\BOOKMARK [2][-]{subsection.10.4}{Range}{section.10}% 94
-\BOOKMARK [2][-]{subsection.10.5}{ravel\(\)}{section.10}% 95
-\BOOKMARK [2][-]{subsection.10.6}{Basic Git}{section.10}% 96
-\BOOKMARK [1][-]{section.11}{Exercise}{}% 97
-\BOOKMARK [1][-]{section.12}{Answer}{}% 98
+\BOOKMARK [3][-]{subsubsection.2.21.2}{Uploading files in google colab}{subsection.2.21}% 39
+\BOOKMARK [2][-]{subsection.2.22}{import}{section.2}% 40
+\BOOKMARK [2][-]{subsection.2.23}{Packages}{section.2}% 41
+\BOOKMARK [1][-]{section.3}{Advanced}{}% 42
+\BOOKMARK [2][-]{subsection.3.1}{args}{section.3}% 43
+\BOOKMARK [2][-]{subsection.3.2}{kwargs}{section.3}% 44
+\BOOKMARK [1][-]{section.4}{NumPy}{}% 45
+\BOOKMARK [2][-]{subsection.4.1}{numpy arrays}{section.4}% 46
+\BOOKMARK [2][-]{subsection.4.2}{slicing}{section.4}% 47
+\BOOKMARK [2][-]{subsection.4.3}{shape and reshape}{section.4}% 48
+\BOOKMARK [2][-]{subsection.4.4}{linspace}{section.4}% 49
+\BOOKMARK [2][-]{subsection.4.5}{arange}{section.4}% 50
+\BOOKMARK [3][-]{subsubsection.4.5.1}{comparing arange and linspace}{subsection.4.5}% 51
+\BOOKMARK [2][-]{subsection.4.6}{meshgrid}{section.4}% 52
+\BOOKMARK [2][-]{subsection.4.7}{random}{section.4}% 53
+\BOOKMARK [2][-]{subsection.4.8}{hstack\(\)}{section.4}% 54
+\BOOKMARK [2][-]{subsection.4.9}{vstack\(\)}{section.4}% 55
+\BOOKMARK [2][-]{subsection.4.10}{Conditional Selection}{section.4}% 56
+\BOOKMARK [2][-]{subsection.4.11}{np.where}{section.4}% 57
+\BOOKMARK [2][-]{subsection.4.12}{Statistical Methods}{section.4}% 58
+\BOOKMARK [2][-]{subsection.4.13}{Error with math versus numpy}{section.4}% 59
+\BOOKMARK [1][-]{section.5}{Matplotlib}{}% 60
+\BOOKMARK [2][-]{subsection.5.1}{Plotting List of Data}{section.5}% 61
+\BOOKMARK [3][-]{subsubsection.5.1.1}{connected data point list plot}{subsection.5.1}% 62
+\BOOKMARK [2][-]{subsection.5.2}{Plotting Function}{section.5}% 63
+\BOOKMARK [2][-]{subsection.5.3}{3D plot}{section.5}% 64
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Extra remark on plotting functions}{subsection.5.3}% 65
+\BOOKMARK [2][-]{subsection.5.4}{subplot}{section.5}% 66
+\BOOKMARK [2][-]{subsection.5.5}{Histogram}{section.5}% 67
+\BOOKMARK [2][-]{subsection.5.6}{Customisation}{section.5}% 68
+\BOOKMARK [2][-]{subsection.5.7}{Legends}{section.5}% 69
+\BOOKMARK [2][-]{subsection.5.8}{Colors}{section.5}% 70
+\BOOKMARK [2][-]{subsection.5.9}{Margins}{section.5}% 71
+\BOOKMARK [1][-]{section.6}{Pandas}{}% 72
+\BOOKMARK [2][-]{subsection.6.1}{Selection}{section.6}% 73
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Conditional Selection}{subsection.6.1}% 74
+\BOOKMARK [2][-]{subsection.6.2}{Column manipulation}{section.6}% 75
+\BOOKMARK [1][-]{section.7}{Scikit-Learn}{}% 76
+\BOOKMARK [2][-]{subsection.7.1}{Supervised Learning}{section.7}% 77
+\BOOKMARK [3][-]{subsubsection.7.1.1}{kNN in Scikit-Learn}{subsection.7.1}% 78
+\BOOKMARK [2][-]{subsection.7.2}{Limitations of supervised learning}{section.7}% 79
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Insufficient coverage of the attribute space}{subsection.7.2}% 80
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Biased Data}{subsection.7.2}% 81
+\BOOKMARK [3][-]{subsubsection.7.2.3}{Lack of Information}{subsection.7.2}% 82
+\BOOKMARK [3][-]{subsubsection.7.2.4}{Lack of Complexity of the classifier \(``underfitting"\)}{subsection.7.2}% 83
+\BOOKMARK [3][-]{subsubsection.7.2.5}{Over-complexity of the classifier \(``overfitting"\)}{subsection.7.2}% 84
+\BOOKMARK [2][-]{subsection.7.3}{Imbalanced Classes}{section.7}% 85
+\BOOKMARK [2][-]{subsection.7.4}{Why splitting the data is important}{section.7}% 86
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Cross Validation}{subsection.7.4}% 87
+\BOOKMARK [3][-]{subsubsection.7.4.2}{Finding the best parameter setting \(k\) using cross validation}{subsection.7.4}% 88
+\BOOKMARK [2][-]{subsection.7.5}{Decision Trees}{section.7}% 89
+\BOOKMARK [3][-]{subsubsection.7.5.1}{Decision Trees in Scikit-Learn}{subsection.7.5}% 90
+\BOOKMARK [2][-]{subsection.7.6}{Unsupervised Learning}{section.7}% 91
+\BOOKMARK [3][-]{subsubsection.7.6.1}{Encoding}{subsection.7.6}% 92
+\BOOKMARK [3][-]{subsubsection.7.6.2}{Feature Analysis}{subsection.7.6}% 93
+\BOOKMARK [2][-]{subsection.7.7}{Reinforcement Learning}{section.7}% 94
+\BOOKMARK [1][-]{section.8}{SciPy}{}% 95
+\BOOKMARK [1][-]{section.9}{yt-toolkit}{}% 96
+\BOOKMARK [1][-]{section.10}{Glossary}{}% 97
+\BOOKMARK [2][-]{subsection.10.1}{Enumerate}{section.10}% 98
+\BOOKMARK [2][-]{subsection.10.2}{Init function}{section.10}% 99
+\BOOKMARK [2][-]{subsection.10.3}{Main condition}{section.10}% 100
+\BOOKMARK [2][-]{subsection.10.4}{Range}{section.10}% 101
+\BOOKMARK [2][-]{subsection.10.5}{ravel\(\)}{section.10}% 102
+\BOOKMARK [2][-]{subsection.10.6}{Basic Git}{section.10}% 103
+\BOOKMARK [1][-]{section.11}{Exercise}{}% 104
+\BOOKMARK [1][-]{section.12}{Answer}{}% 105

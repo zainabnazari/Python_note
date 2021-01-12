@@ -44,8 +44,8 @@
             urlcolor  = codegreen,
             citecolor = blue,
             anchorcolor = blue]{hyperref}
-            \author{Zainab Nazari, and Carl Stermann-L\"ucke}
-\title{Python Note}
+            \author{\textbf{Zainab Nazari, and Carl Stermann-L\"ucke}}
+\title{\huge\textbf{Python Note}}
 \date{\today}
 
 
@@ -60,8 +60,9 @@
 
 \maketitle
 \begin{abstract}
-    This note is the summary of our almost \textit{every day} short discussion over python, and its application since September 2019. We try to provide a simple way to learn python. We have included useful examples to further clarify topics. This note was helpful for us and we hope others can benefit from the content. If you have any questions or suggestions we are glad to know about it.
+    This note is an introduction to python. It starts with the basics of programming in python. Most of the well-known packages like Numpy, Matplotlib, Pandas, and Scikit-Learn are covered. It gives a simple introduction to them by giving  examples that can  clarify their functionalities. At the end we also put exercises along with their answers that  facilitate the process of learning. We hope that this note would be useful for anyone who wants to start, and to get familiar with python \footnote{This note is the summary of our almost \textit{every day} short discussion over python, and its application since September 2019.}. 
 \end{abstract}
+\pagebreak
 \tableofcontents
 
 
@@ -274,10 +275,10 @@ nested, that means the body of a while-loop can contain further while-loops.
 \lstinputlisting[language=Python]{factorial.py}
 Here is another example where the input number is going to be repeatedly typed until it reaches the number itself
 \lstinputlisting[language=Python]{repeat.py}
-\subsubsection{while-True}
-Here is an example which can show how can we have an open loop while code. It basically means that the loop continues non-stop unless we want to break it. For example in the following code we can input as many integer number as we wish and once we enter \texttt{q}, it gives us the sum and the product of the numbers.
+\subsubsection{while-True, and if True}
+Here is an example which can show how we can have an open while loop in the code. It basically means that the loop continues non-stop unless we want to break it. For example in the following code we can input as many integer number as we wish and once we enter \texttt{q}, it gives us the sum and the product of the numbers.
 \lstinputlisting[language=python]{sum_product.py}
-
+It is also possible to use True (or False) as a condition in an if-statement. This is usually not useful for productive code, but it can be easier when we want to remove an if-statement (temporarily), because we don't need to change the indentation.
 
 \subsection{for-loop}
 Unlike a while-loop, a for-loop does not run until a specified condition is met, but rather runs over sequential
@@ -290,7 +291,11 @@ We can use for loops to convert one list into another. But there is an easier wa
 \lstinputlisting[language=Python]{list_comprehension.py}
 \subsubsection{nested for-loop}
 \lstinputlisting[language=Python]{nested_for_loop.py}
+\subsection{yield}
+yield is a function that can be used to generate multiple outputs one after another. This is useful if you want to iterate through different values without storing all of them at the same time in some data structure. The \texttt{yield}-function interrupts the code and let's its surrounding function return the value. When the \texttt{next}-function is called, the execution of the surrounding function continues until the next \texttt{yield}-statement. A \texttt{for}-loop does that automatically.
 
+In the following code, we wrote a simple range function with two parameters. Python has a similar function built in, see \ref{range}. The advantage over making a list of all the numbers and then iterating through that list is that in our code we never need to store all the numbers in the memory at the same time. We only store the current one. This saves memory.
+\lstinputlisting[language=Python]{range_self_made.py}
 \subsection{Sets}
 A set is a collection that does not store the order nor the number of appearances of objects. The objects in a set are called members of the set.  It stores element, however, it only stores which elements belong to the set. It does not store how often an element belongs to a set or where in the set it is positioned. Sets also implement various operations of set theory (mathematics), such as ``difference", ``issubset", ``issuperset", ``isdisjoint", ``union" or ``intersection", etc. The set can find out if an element is there because it can internally sort the elements and can do that simply because it doesn't need to preserve the order in which the elements are given. Searching in sorted structure is faster than searching in an unsorted structure. Example
 \lstinputlisting[language=Python]{set.py}
@@ -431,7 +436,7 @@ There is a second option to pass an arbitrary number of arguments: If we add two
 
 \subsection{numpy arrays}
 we can arbitrary make an array of numbers, see the following
-\lstinputlisting[language=Python]{array.py}
+\lstinputlisting[language=Python]{array-MODIFIED.py}
 \label{subsec:numpy_arrays}
 NumPy deals with arrays and matrices. In the following example you can see how an operation on a list differs from the numpy array.
 \lstinputlisting[language=Python]{numpy_ex1.py}
@@ -736,7 +741,7 @@ Since pandas is based on numpy, you can treat column and rows as a numpy array a
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SCIKIT-LEARN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Scikit-Learn}
+\section{An Introduction to Machine Learning using Scikit-Learn}
 Machine Learning is the study of algorithms that improve their estimate of structures in data by learning from data. It includes three major branches:
 \begin{itemize}
 \item Supervised Learning, solving the task of classification or regression
@@ -768,8 +773,8 @@ Day & Temperature & Wind speed & Rain \\ \hline
 Tuesday & 25 & 4 &No\\ \hline
 Wednesday &27  & 3&? \\ \hline
 \end{longtable}
-We want to know whether it will rain on Wednesday. One idea is that we find the most similar day and predict based on that. To find out the closest case to Wednesday is to simply find out the distance in sort of a vector space, where temperature is one axis and wind is another axis.
-Therefore we have
+We want to know whether it will rain on Wednesday. One idea is that we find the most similar day and predict based on that. To find out the closest case to Wednesday is to simply find out the distance in a vector space, where temperature is one \textit{dimension} and wind is another dimension.
+Different definitions of distance are possible. They correspond to different values of $p$ in the \href{https://en.wikipedia.org/wiki/Minkowski_distance}{Minkowski Distance}. For example, for $p=1$, we have the \textit{Manhattan Distance}, which measures the sum of the distances on each dimension. This can be useful if the scales of features are very different. Anyway, let us assume that we use the euclidean distance. Therefore we have
 \begin{align}\nonumber
 D(Wed-Tue)=\sqrt{(27-25)^2+(3-4)^2)}=\sqrt{5}=2.2\\
 D(Wed-Mon)=\sqrt{(27-20)^2+(3-5)^2)}=\sqrt{53}=7.3
@@ -860,11 +865,33 @@ The following code shows how to learn with decision trees in scikit-learn. The c
     \caption{Decision tree example generate by the code in section \ref{decision_tree_example.py}.}
     \label{fig:decision}
 \end{figure}
+The nice thing about scikit-learn is that we have to change very little in our code to replace one classifier with another, for example replace kNN with Decision Trees. Basically, we only have to import a different classifier and use a different class when creating the classifier. For example, we create the Decision Tree classifier with the line \te{$clf = tree.DecisionTreeClassifier()$}. We could replace that line with \texttt{$clf = KNeighborsClassifier\left(n\_neighbors=7\right)$} to have a kNN with k=7. The remaining lines of code can stay as they are.
 
+Cross validation is also very similar for decision trees as it is for kNN, as shown in the following code example:
+\lstinputlisting[language=Python]{cross_v_decisiontree.py}\label{cross_v_decisiontree.py}
 \subsection{Unsupervised Learning}
-Another major branch of machine learning does not involve class labels. Instead, it searches for connections of attributes, patterns and correlations in the data. For instance, considering the previous example of weather forecast, in the unsupervised learning, machine would try to collect the data points in groups that have similar temperatures and wind speeds. It organises them in sets of similar properties. This technique is called clustering. However, there are other techniques that use unsupervised learning such as Encoding and Feature Analysis.
+Another major branch of machine learning does not involve class labels. Instead, it searches for connections of attributes, patterns and correlations in the data. For instance, considering the previous example of weather forecast, in the unsupervised learning, the machine would try to collect the data points in groups that have similar temperatures and wind speeds. It organises them in sets of similar properties. This technique is called clustering. However, there are other techniques that use unsupervised learning such as Encoding and Feature Analysis.
 They all have a common point that there is no ground truth given. Unsupervised learning can help to find the approximate function in the supervised learning process.
 
+\subsubsection{Cluster evaluation}
+\label{subsubsec:clusterEvaluation}
+In general, a cluster is better if the data points are close to the other data points in the same cluster, and far away from the data points that are not in the same cluster. One way of measuring that is the \texttt{dissimilarity}. Let $c$ be a cluster and $C$ be a set of clusters. Then
+\begin{equation}
+    variability(c) = \sum_{e\in c}distance(mean(c),e)^2
+\end{equation}
+and
+\begin{equation}
+    dissimilarity(C) = \sum_{c\in C}{variability(c)}
+\end{equation}\cite{MIT:ComputationalThinking}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.9]{Variability.png}
+    \caption{Example of the variability of two clusters. The arrows show the means of the clusters.}
+    \label{fig:clusterEvaluation}
+\end{figure}
+
+
+Another way of measuring the quality of the clustering is to sum up the sizes of the clusters. The smaller the sum, the better the clustering, because it means that the clusters span less empty space between far-away data points. The size of the clusters can be the size of the convex hull of their points.
 \subsubsection{Encoding}
 \subsubsection{Feature Analysis}
 \subsection{Reinforcement Learning}
@@ -1018,4 +1045,8 @@ After that to install \te{git python} you can use the following command:
 
 
 
+
+Different definitions of distance are possible. They correspond to different values of $p$ in the \href{https://en.wikipedia.org/wiki/Minkowski_distance}{Minkowski Distance}. For example, for $p=1$, we have the \textit{Manhattan Distance}, which measures the sum of the distances on each dimension. This can be useful if the scales of features are very different. Anyway, let us assume that we use th
+
+    variability(c) = \sum_{e\in c}(distance(mean(c),e))^2
 
